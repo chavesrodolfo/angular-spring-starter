@@ -49,7 +49,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `../server/src/main/resorces/static/` directory. Use the `-prod` flag for a production build.
+Run `ng build` to build the project. The build artifacts will be stored in the `dist` directory. Use the `-prod` flag for a production build.
 
 ## Running unit tests
 
@@ -63,3 +63,25 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+# Dockerized Angular App (with Angular CLI)
+
+## Build docker image
+
+```
+docker build -t app-frontend .
+```
+
+## Run the container
+
+```
+docker run -d -p 80:80 --name app-frontend app-frontend
+```
+
+## Remove the container
+
+```
+docker rm app-frontend -f
+```
+
+The app will be available at http://192.168.99.100

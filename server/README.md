@@ -89,3 +89,10 @@ spring:
 
 ### Generating password hash for users
 I'm using [bcrypt](https://en.wikipedia.org/wiki/Bcrypt) to encode passwords. Your can generate your hashes with this simple tool: [BCrypt Calculator](https://www.dailycred.com/article/bcrypt-calculator)
+
+
+## Run the container
+
+```
+docker run -d -p 8080:8080 --name angular-spring-starter angular-spring-starter
+```
